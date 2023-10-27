@@ -2,7 +2,10 @@
 
 Swagger link - http://localhost:3001/fibonacci
 
-API end point link : http://localhost:3001/fibonacci/7
+API end point link : http://localhost:3001/fibonacci/{number}
+
+Example : To find fibonacci value of 7 
+          http://localhost:3001/fibonacci/7
 
 Implentation of API :  Promise with an asynchronous recursive function is used to fetch fibonacci value and BigInt data type is used to fetch fibonacci value for large number. cachemanager NPM module is used to store the value for specific time and return directly from cache . Interceptors like timeout , unhandled exceptions are included.
 
