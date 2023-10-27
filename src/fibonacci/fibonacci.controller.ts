@@ -1,11 +1,11 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common';
+import { Controller, Get, Param, Logger } from '@nestjs/common';
 import { FibonacciService } from './fibonacci.service';
 import { ApiResponse, ApiTags, ApiParam } from '@nestjs/swagger';
 
 @Controller('fibonacci')
 export class FibonacciController {
   logger: Logger;
-  constructor(private readonly fibonacciService: FibonacciService) {  this.logger = new Logger(FibonacciController.name);}
+  constructor(private readonly fibonacciService: FibonacciService) { this.logger = new Logger(FibonacciController.name); }
 
   @Get(':num')
   @ApiTags('Fibonacci')

@@ -7,7 +7,6 @@ async function bootstrap() {
   const config = new DocumentBuilder().setTitle('Fibonacci Demo Application')
   .setDescription("Fibonacci Demo API Application")
   .setVersion('v1')
-  // .addTag('books')
   .build();
 
 const document = SwaggerModule.createDocument(app, config);

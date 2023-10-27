@@ -26,12 +26,11 @@ export class FibonacciService {
           do_fibo(b, a + b, n - 1, resolve);
         });
       }
-       const result = await new Promise((resolve) => {
+      const result = await new Promise((resolve) => {
         do_fibo(BigInt(0), BigInt(1), n - 1, resolve);
       });
       await this.cachemanager.set(n, result, 30000);
       return await result;
-
     } catch (error) {
       return error;
     }
