@@ -16,6 +16,7 @@ export class FibonacciController {
     try {
       return await this.fibonacciService.getFibonacciNum(+num);
     } catch (error) {
+      return error;
     }
   }
 }
