@@ -14,6 +14,9 @@ export class FibonacciController {
   @ApiParam({ name: 'num', required: true, type: BigInt, description: 'Either an integer or a Big integer' })
   async getFibonacciNum(@Param('num') num: BigInt): Promise<any> {
     try {
+      if(num == BigInt(0)){
+        return 0;
+      }
       return await this.fibonacciService.getFibonacciNum(+num);
     } catch (error) {
       return error;
