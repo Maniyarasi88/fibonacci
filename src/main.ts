@@ -1,11 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { FibonacciModule } from './fibonacci/fibonacci.module';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(FibonacciModule);
-  const config = new DocumentBuilder().setTitle('Fibonacci Demo Application')
-  .setDescription("Fibonacci Demo API Application")
+  var app = await NestFactory.create(AppModule);
+  const config = new DocumentBuilder().setTitle('Fibonacci & Longest Balanced Substring Demo Application')
+  .setDescription("Fibonacci & Longest Balanced Substring Demo API Application")
   .setVersion('v1')
   .build();
 
